@@ -1,8 +1,7 @@
 package org.example;
 
-import org.example.models.StudyGroup;
-
-import java.util.Stack;
+import org.example.Client.FileNameListener;
+import org.example.Client.InputClireader;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -18,11 +17,13 @@ public class Main {
 //        xmlFieHandler.load(new File("studyGroups.xml"));
 //        var groups = xmlFieHandler.get();
 //
-        LocalDateBase localDateBase = new LocalDateBase(new Stack<StudyGroup>());
+        FileNameListener fileNameListener = new FileNameListener();
+        fileNameListener.listener();
+        fileNameListener.reader();
+        UniqueId id = new UniqueId();
+        LocalDateBase localDateBase = new LocalDateBase(fileNameListener.getGroups());
         Receiver receiver = new Receiver(localDateBase);
         Invoker invoker = new Invoker(receiver);
         InputClireader.openStream();
-        System.out.println("Hello");
-
     }
 }

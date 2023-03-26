@@ -1,4 +1,4 @@
-package org.example.Client.FileManager;
+package org.example.Client;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package org.example.Client.FileManager;
+package org.example.Client;
 
 public enum DataInOutStatus {
     FAILED ("Failed"),

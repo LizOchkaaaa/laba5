@@ -4,8 +4,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Stack;
 
 @XmlRootElement(name = "studyGroups")
@@ -13,13 +11,13 @@ import java.util.Stack;
 public class StudyGroups {
 
     @XmlElement(name = "studyGroup")
-    private List<StudyGroup> groups;
+    private Stack<StudyGroup> groups;
 
-    public List<StudyGroup> getStudyGroups() {
+    public Stack<StudyGroup> getStudyGroups() {
         return groups;
     }
 
-    public void setStudyGroups(List<StudyGroup> groups) {
+    public void setStudyGroups(Stack<StudyGroup> groups) {
         this.groups = groups;
     }
 

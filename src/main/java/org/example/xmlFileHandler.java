@@ -18,9 +18,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class xmlFileHandler implements Loading.Loadable {
 
@@ -47,7 +49,7 @@ public class xmlFileHandler implements Loading.Loadable {
      * Method for saving (marshaling) java collection to XML-file and updating hash of file
      */
     @Override
-    public boolean save(List<StudyGroup> groups, File file) throws Exception {
+    public boolean save(Stack<StudyGroup> groups, File file) throws Exception {
         for (StudyGroup sg : groups) {
             System.out.println(sg.toString());
         }
@@ -103,15 +105,15 @@ public class xmlFileHandler implements Loading.Loadable {
             // initialize jaxb
             JAXBContext context = JAXBContext.newInstance(StudyGroups.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            var fgfg = unmarshaller.unmarshal(xmlEventReader, StudyGroups.class)
-                    .getValue()
-                    .getStudyGroups();
+            groups = unmarshaller.unmarshal(xmlEventReader, StudyGroups.class).getValue().getStudyGroups();
             Collections.sort(groups);
-            System.out.println("loaded " + " products: " + groups.size());
+            System.out.println("loaded " + "groups: " + groups.size());
         } catch (Exception jaxbException) {
             groups = new Stack<>();
             System.out.println("Exception caught. " + jaxbException.getMessage());
         }
     }
+
+
 
 }
