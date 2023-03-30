@@ -1,7 +1,6 @@
 package org.example.Client;
 
-import org.example.Commands.AbstractCommand;
-import org.example.MetaInfoCommand;
+import org.example.Server.Commands.AbstractCommand;
 
 import java.util.ArrayList;
 

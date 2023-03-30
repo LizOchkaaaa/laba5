@@ -1,9 +1,8 @@
 package org.example.Client;
 
-import org.example.Commands.AbstractCommand;
-import org.example.Invoker;
-import org.example.MetaInfoCommand;
-import org.example.UniqueId;
+import org.example.Server.Commands.AbstractCommand;
+import org.example.Server.Invoker;
+import org.example.Server.UniqueId;
 import java.util.*;
 
 public class CommandChecker {

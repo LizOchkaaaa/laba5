@@ -2,8 +2,8 @@ package org.example.Client;
 
 import org.example.exceptions.FileLoadingException;
 import org.example.exceptions.NoAccessToFileException;
-import org.example.models.StudyGroup;
-import org.example.xmlFileHandler;
+import org.example.Server.Models.StudyGroup;
+import org.example.Server.XmlUtils.xmlFileHandler;
 
 import java.io.File;
 import java.util.Stack;
@@ -29,6 +29,7 @@ public class FileNameListener {
         try {
             read.load(file1);
             groups = read.get();
+            System.out.println(groups.toString());
         }catch (NoAccessToFileException | FileLoadingException e) {
             return DataInOutStatus.FAILED;
         }

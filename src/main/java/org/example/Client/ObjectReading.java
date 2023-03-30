@@ -1,9 +1,9 @@
 package org.example.Client;
 
-import org.example.Commands.AbstractCommand;
-import org.example.Commands.ExecuteScriptCommand;
-import org.example.Validator.ValidateAbstract;
-import org.example.Validator.ValidatorManager;
+import org.example.Server.Commands.AbstractCommand;
+import org.example.Server.Commands.ExecuteScriptCommand;
+import org.example.Server.Validator.ValidateAbstract;
+import org.example.Server.Validator.ValidatorManager;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
