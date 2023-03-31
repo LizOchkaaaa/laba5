@@ -42,6 +42,7 @@ public class Receiver {
     public String clearCollection() {
         if (getMainCollection().size() != 0) {
             getMainCollection().clear();
+            setDateOfLastChange();
             return "Main collection cleared";
         } else {
             return "There is no elements in main collection";
@@ -62,6 +63,7 @@ public class Receiver {
 
     public String addNew(ArrayList<String> arguments , Integer id) {
         if (getMainCollection().add(new StudyGroupFactory().createStudyGroup(id,  arguments))) {
+            setDateOfLastChange();
             return "Successfully";
         };
         return "Adding new StudyGroup failed.";
@@ -79,6 +81,7 @@ public class Receiver {
         getMainCollection().add(studyGroup);
          if (iter == 0) {
              getMainCollection().add(studyGroup);
+             setDateOfLastChange();
              return "Successfully";
          }
          return "Element was not added into the main collection. There is at least one element bigger than typed";
@@ -96,6 +99,7 @@ public class Receiver {
 
 
     public void remove(StudyGroup group){
+        setDateOfLastChange();
         this.getMainCollection().remove(group);
     }
 
@@ -109,6 +113,9 @@ public class Receiver {
                 getMainCollection().remove(studyGroup1);
                 countRemoved++;
             }
+        }
+        if (countRemoved > 0) {
+            setDateOfLastChange();
         }
         return  "Successfully removed "  + countRemoved + " StudyGroups";
     }
@@ -129,7 +136,6 @@ public class Receiver {
         for (StudyGroup group : mainCollection) {
             sumOfStudentsCountValue += group.getStudentsCount();
         }
-
         return "Sum of all StudentsCount in Study Group = " + sumOfStudentsCountValue;
     }
 
@@ -139,6 +145,7 @@ public class Receiver {
         for (StudyGroup group : mainCollection) {
             if (group.getId() == id) {
                 this.remove(group);
+                setDateOfLastChange();
                 return "Successfully";
             }
         }
@@ -161,16 +168,16 @@ public class Receiver {
         StudyGroup studyGroup = new StudyGroupFactory().createStudyGroup(id,  arguments);
         Stack<StudyGroup> stack2 = getMainCollection();
         var iter = 0;
-        var succses = false;
+        var success = false;
         for (StudyGroup studyGroup1 : stack2 ) {
             if (studyGroup1.getId() == id) {
                 getMainCollection().remove(studyGroup1);
                 getMainCollection().add(iter , studyGroup);
-                succses = true;
+                success = true;
             }
             iter++;
         }
-        if(!succses) {
+        if(!success) {
             return "Element was not updated";
         }
         else {

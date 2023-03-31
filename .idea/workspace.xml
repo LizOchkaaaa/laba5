@@ -4,37 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d823468d-41a7-4c57-84a0-7fa627e3c4da" name="Changes" comment="betta 00202225666665">
-      <change afterPath="$PROJECT_DIR$/script" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Annotation/Date.java" afterDir="false" />
+    <list default="true" id="d823468d-41a7-4c57-84a0-7fa627e3c4da" name="Changes" comment="betta 002022256666654444">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client/CommandChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/CommandChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client/FileNameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/FileNameListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client/InputClireader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/InputClireader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client/ObjectReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client/ObjectReading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AbstractCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/PrintFieldAscendingStudentsCountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/PrintFieldAscendingStudentsCountCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/PrintUniqueFormOfEducationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/PrintUniqueFormOfEducationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ReorderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ReorderCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/ShowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/SumOfStudentsCountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/SumOfStudentsCountCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/UpdateIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Commands/UpdateIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/FieldFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/FieldFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Models/StudyGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Models/StudyGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server/Validator/ValidatorBirthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server/Validator/ValidatorBirthday.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.Client.FileManager" />
@@ -146,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680179445147</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="betta 002022256666654444">
+      <created>1680253507508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680253507508</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +147,8 @@
     <MESSAGE value="betta 0020222" />
     <MESSAGE value="betta 002022255" />
     <MESSAGE value="betta 00202225666665" />
-    <option name="LAST_COMMIT_MESSAGE" value="betta 00202225666665" />
+    <MESSAGE value="betta 002022256666654444" />
+    <option name="LAST_COMMIT_MESSAGE" value="betta 002022256666654444" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

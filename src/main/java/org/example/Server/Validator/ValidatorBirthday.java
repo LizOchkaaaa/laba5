@@ -21,7 +21,7 @@ public class ValidatorBirthday extends ValidateAbstract<ZonedDateTime> {
             String[] args = variable.split("-");
             ZonedDateTime zdtWithZoneOffset = ZonedDateTime.of(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]), 0, 0, 0, 0, ZoneId.systemDefault());
             return variable != null;
-        } catch (IndexOutOfBoundsException | DateTimeException | NullPointerException e) {
+        } catch (IndexOutOfBoundsException | DateTimeException | NullPointerException | NumberFormatException e) {
             return false;
         }
     }
