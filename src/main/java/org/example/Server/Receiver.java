@@ -178,4 +178,17 @@ public class Receiver {
         }
 
     }
+
+    public boolean check(ArrayList<String> arguments){
+        for (StudyGroup el : getMainCollection()){
+            try {
+                if(el.getId() == Integer.parseInt(arguments.get(0))) {
+                    return true;
+                }
+            }catch (Exception e){
+                return false;
+            }
+        }
+        return false;
+    }
 }

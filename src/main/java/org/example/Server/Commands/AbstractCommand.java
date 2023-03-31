@@ -7,11 +7,13 @@ public abstract class AbstractCommand implements Execute {
     private String discription;
 
     private Integer extraArgs;
+    private String fullname;
 
-    public AbstractCommand(String name, String discription , Integer extraArgs ) {
+    public AbstractCommand(String name, String discription , Integer extraArgs , String fullname) {
         this.name = name;
         this.discription = discription;
         this.extraArgs = extraArgs;
+        this.fullname = fullname;
     }
 
     public Integer getExtraArgs() {
@@ -20,7 +22,10 @@ public abstract class AbstractCommand implements Execute {
 
     @Override
     public String toString() {
-        return name + " - " + discription;
+        if(fullname == ""){
+            return name + " - " + discription;
+        }
+        return name + " " + fullname + " - " + discription;
     }
 
     public boolean isNeededExtraArgs(){

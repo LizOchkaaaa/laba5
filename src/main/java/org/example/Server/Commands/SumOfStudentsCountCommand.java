@@ -9,7 +9,7 @@ public class SumOfStudentsCountCommand extends AbstractCommand implements Execut
 
     public SumOfStudentsCountCommand() {
         super("sum_of_students_count", "display the sum of the values of the studentsCount" +
-                " field for all elements of the collection", 0);
+                " field for all elements of the collection",  0 , "");
     }
 
     @Override

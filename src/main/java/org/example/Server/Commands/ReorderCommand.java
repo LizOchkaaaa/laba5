@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ReorderCommand extends AbstractCommand implements Execute {
     public ReorderCommand() {
-        super("reorder", "sort the collection in reverse order", 0);
+        super("reorder", "sort the collection in reverse order", 0 , "");
     }
     @Override
     public String execute(ArrayList<String> arguments, Receiver worker) {

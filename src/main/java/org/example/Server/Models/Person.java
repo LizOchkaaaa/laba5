@@ -2,6 +2,7 @@ package org.example.Server.Models;
 
 
 import org.example.Annotation.Complex;
+import org.example.Annotation.Date;
 import org.example.Server.XmlUtils.DateTimeAdapter;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -14,6 +15,7 @@ public class Person {
     private String name; //Поле не может быть null, Строка не может быть пустой
     @XmlElement
     @XmlJavaTypeAdapter(DateTimeAdapter.class)
+    @Date
     private ZonedDateTime birthday; //Поле не может быть null
     @XmlElement
     private Integer weight; //Поле может быть null, Значение поля должно быть больше 0

@@ -1,5 +1,6 @@
 package org.example.Server.Models;
 import org.example.Annotation.Complex;
+import org.example.Annotation.Date;
 import org.example.Server.XmlUtils.DateTimeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -17,6 +18,7 @@ public class StudyGroup implements Comparable<StudyGroup>{
     @Complex
     private Coordinates coordinates; //Поле не может быть null
     @XmlElement
+    @Date
     @XmlJavaTypeAdapter(DateTimeAdapter.class)
     private ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
     @XmlElement

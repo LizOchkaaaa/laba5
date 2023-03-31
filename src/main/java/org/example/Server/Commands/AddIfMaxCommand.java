@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class AddIfMaxCommand extends AbstractCommand implements Execute {
 
     public AddIfMaxCommand() {
-        super("add_if_max", "add a new element to the collection if its value is greater than the value of the largest element in this collection", 13);
+        super("add_if_max", "add a new element to the collection if its value is greater than the value of the largest element in this collection", 13 , "{element}");
     }
 
     @Override

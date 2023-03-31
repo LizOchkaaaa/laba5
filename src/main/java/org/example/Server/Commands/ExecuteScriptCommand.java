@@ -9,14 +9,14 @@ import org.example.Server.Interfaces.Execute;
 import java.util.ArrayList;
 
 public class ExecuteScriptCommand extends AbstractCommand implements Execute {
-    private ArrayList<String> historyOfFiles;
+    private ArrayList<String> historyOfFiles = new ArrayList<>();
     private static ArrayList<String> readedCommands;
     private static Integer currentCommand;
 
     public ExecuteScriptCommand() {
-        super("execute script", "read and execute the script from the specified file." +
+        super("execute_script", "read and execute the script from the specified file." +
                 " The script contains commands in the same form in which they are entered by the user" +
-                " in interactive mode", 1);
+                " in interactive mode", 1 , "{file_name}");
     }
 
     public ArrayList<String> getHistoryOfFiles() {
@@ -39,7 +39,6 @@ public class ExecuteScriptCommand extends AbstractCommand implements Execute {
     public String execute(ArrayList<String> arguments, Receiver worker) {
         StringBuilder execution = new StringBuilder();
         String fileName = arguments.get(0);
-
         if (historyOfFiles.contains(fileName)) {
             return execution.append("You have recursion in your script. Failed.").toString();
         }

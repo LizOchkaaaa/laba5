@@ -10,7 +10,7 @@ public class HelpCommand extends AbstractCommand implements Execute {
     Collection<AbstractCommand> collectionOfCommands;
 
     public HelpCommand(Collection<AbstractCommand> collectionOfCommands) {
-        super("help", "display help on available commands" , 0);
+        super("help", "display help on available commands" , 0 , "");
         this.collectionOfCommands = collectionOfCommands;
     }
 

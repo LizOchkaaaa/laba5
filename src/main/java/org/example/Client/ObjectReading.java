@@ -25,9 +25,13 @@ public class ObjectReading {
                             iter++;
                             continue;
                         }
-                        if (!field.equals("StudyGroup.id") && !field.equals("StudyGroup.creationDate")) {
+                        if (!field.equals("StudyGroup.id") && !field.equals("StudyGroup.creationDate" ) && !field.equals("StudyGroup.Person.birthday")) {
                             OutStream.outputIntoCLI("Type '" + field + "'. Type of '" + field + "' is "
                                     + fields.get(field));
+                        }
+                        if(field.equals("StudyGroup.Person.birthday")) {
+                            OutStream.outputIntoCLI("Type '" + field + "'. Type of '" + field + "' is "
+                                    + fields.get(field) + " Format: YYYY-MM-DD");
                         }
                         String valueOfField = InputClireader.getInputReader().nextLine().trim();
 

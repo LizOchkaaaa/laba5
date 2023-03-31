@@ -1,7 +1,9 @@
 package org.example.Client;
 
 import org.example.Server.Commands.AbstractCommand;
+import org.example.Server.Commands.UpdateIdCommand;
 import org.example.Server.Invoker;
+import org.example.Server.Receiver;
 import org.example.Server.UniqueId;
 import java.util.*;
 
@@ -20,7 +22,8 @@ public class CommandChecker {
             }
             if (command.getExtraArgs() >= 1) {
                 if (command.getName().equals("update")) {
-                    if (argumentsToCommand.size() == 0) {
+                    if (argumentsToCommand.size() == 0 || argumentsToCommand.size() !=1 || Invoker.execute(command , argumentsToCommand).equals("FAILED")) {
+                        OutStream.outputIntoCLI("You have wrong id");
                         return DataInOutStatus.FAILED;
                     } else {
                         correctnessStatus = checkCorrectnessOfComplicatedCommand(command, argumentsToCommand);

@@ -1,6 +1,7 @@
 package org.example.Server;
 
 import org.example.Annotation.Complex;
+import org.example.Annotation.Date;
 import org.example.Server.Models.StudyGroup;
 
 import java.lang.reflect.Field;
@@ -18,8 +19,16 @@ public class FieldFetcher {
             if (studyGroupField.isAnnotationPresent(Complex.class)) {
                 resultHashMap.putAll(this.fetchFromField(studyGroupField, "StudyGroup", new StringBuilder()));
             } else {
-                resultHashMap.put(studyGroupField.getDeclaringClass().getSimpleName() + "." + studyGroupField.getName(),
-                        studyGroupField.getType().getSimpleName());
+                if(studyGroupField.isAnnotationPresent(Date.class)){
+                    resultHashMap.put(studyGroupField.getDeclaringClass().getSimpleName() + "." + studyGroupField.getName(),
+                            studyGroupField.getType().getSimpleName() + " Format: YYYY-MM-DD");
+
+                }
+                else {
+                    resultHashMap.put(studyGroupField.getDeclaringClass().getSimpleName() + "." + studyGroupField.getName(),
+                            studyGroupField.getType().getSimpleName());
+                }
+
             }
         }
         return resultHashMap;
