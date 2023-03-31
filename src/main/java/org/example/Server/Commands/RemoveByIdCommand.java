@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class RemoveByIdCommand extends AbstractCommand implements Execute {
     public RemoveByIdCommand() {
-        super("remove_by_id", "remove element from collection by its id", 1 , "id");
+        super("remove_by_id", "remove element from collection by its id", 1 , "id", false);
     }
 
     @Override

@@ -10,7 +10,7 @@ public class PrintFieldAscendingStudentsCountCommand extends AbstractCommand imp
 
     public PrintFieldAscendingStudentsCountCommand() {
         super("print_field_ascending_students_count", "display the values of the students count" +
-                " field of all elements in ascending order", 0 , "");
+                " field of all elements in ascending order", 0 , "" , false);
     }
 
     @Override

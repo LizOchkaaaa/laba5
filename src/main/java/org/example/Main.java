@@ -4,6 +4,7 @@ import org.example.Client.FileNameListener;
 import org.example.Client.InputClireader;
 import org.example.Server.Invoker;
 import org.example.Server.LocalDateBase;
+import org.example.Server.Models.StudyGroup;
 import org.example.Server.Receiver;
 import org.example.Server.UniqueId;
 
@@ -29,6 +30,11 @@ public class Main {
         fileNameListener.listener();
         fileNameListener.reader();
         UniqueId id = new UniqueId();
+        for (StudyGroup group : fileNameListener.getGroups()) {
+            if (UniqueId.getCurrentID() < group.getId()) {
+                id.setId(group.getId());
+            }
+        }
         LocalDateBase localDateBase = new LocalDateBase(fileNameListener.getGroups());
         Receiver receiver = new Receiver(localDateBase);
         Invoker invoker = new Invoker(receiver);

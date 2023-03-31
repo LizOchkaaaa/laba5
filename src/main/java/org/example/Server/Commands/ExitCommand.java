@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ExitCommand extends AbstractCommand implements Execute {
     public ExitCommand() {
-        super("exit", "terminate program (without saving to file)", 0 , "");
+        super("exit", "terminate program (without saving to file)", 0 , "" , false);
     }
     @Override
     public String execute(ArrayList<String> arguments, Receiver worker) {

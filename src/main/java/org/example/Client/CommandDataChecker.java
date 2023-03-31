@@ -12,12 +12,10 @@ public class CommandDataChecker {
     }
 
     public DataInOutStatus checkInputCommand(AbstractCommand command) {
-        if (command.getExtraArgs() > 1) {
-            var fields = MetaInfoCommand.getFields();
-            extraArgs = new ObjectReading().objread(command , fields);
-            if (extraArgs.size() == 0) {
-                return DataInOutStatus.FAILED;
-            }
+        var fields = MetaInfoCommand.getFields();
+        extraArgs = new ObjectReading().objread(command, fields);
+        if (extraArgs.size() == 0) {
+            return DataInOutStatus.FAILED;
         }
         return DataInOutStatus.SUCCESSFULLY;
     }

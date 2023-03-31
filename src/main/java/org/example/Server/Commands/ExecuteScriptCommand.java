@@ -16,7 +16,7 @@ public class ExecuteScriptCommand extends AbstractCommand implements Execute {
     public ExecuteScriptCommand() {
         super("execute_script", "read and execute the script from the specified file." +
                 " The script contains commands in the same form in which they are entered by the user" +
-                " in interactive mode", 1 , "{file_name}");
+                " in interactive mode", 1 , "{file_name}" , false);
     }
 
     public ArrayList<String> getHistoryOfFiles() {

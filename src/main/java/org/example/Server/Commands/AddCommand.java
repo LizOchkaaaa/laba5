@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class AddCommand extends AbstractCommand implements Execute {
 
     public AddCommand() {
-        super("add", "add a new element to the collection" , 11 , "{element}");
+        super("add", "add a new element to the collection" , 0 , "{element}" , true);
     }
 
     @Override

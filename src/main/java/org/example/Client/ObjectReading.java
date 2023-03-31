@@ -13,7 +13,7 @@ public class ObjectReading {
         ArrayList<String> extraArgs = new ArrayList<String>();
         try {
             OutStream.outputIntoCLI("Type extra data of object");
-            if (command.isNeededExtraArgs()) {
+            if (command.isNeededElementFields()) {
                 ValidatorManager validatorManager = new ValidatorManager();
                 if(!command.getName().equals("execute_script")) {
                     int iter = 1;

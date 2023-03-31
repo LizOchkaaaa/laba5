@@ -17,10 +17,10 @@ public class CommandChecker {
         if (mapCommand.containsKey(commandName)) {
             /* создаем объект команды */
             AbstractCommand command = mapCommand.get(commandName);
-            if (command.getExtraArgs() == 0 && argumentsToCommand.size() != 0) {
+            if (command.getCountOfInlineExtraArgs() == 0 && argumentsToCommand.size() != 0) {
                 return DataInOutStatus.WRONGARGS;
             }
-            if (command.getExtraArgs() >= 1) {
+            if (command.getCountOfInlineExtraArgs() == 1 || command.isNeededElementFields()) {
                 if (command.getName().equals("update")) {
                     if (argumentsToCommand.size() == 0 || argumentsToCommand.size() !=1 || Invoker.execute(command , argumentsToCommand).equals("FAILED")) {
                         OutStream.outputIntoCLI("You have wrong id");
@@ -46,11 +46,12 @@ public class CommandChecker {
     /*проверяем команду у которой много аргусентов на правильность введения */
     private DataInOutStatus checkCorrectnessOfComplicatedCommand(AbstractCommand command, ArrayList<String> argumentsToCommand) {
         DataInOutStatus correctnessStatus = DataInOutStatus.SUCCESSFULLY;
-        if (command.getExtraArgs() == 1 && argumentsToCommand.size() == 1) {
-            correctnessStatus = DataInOutStatus.SUCCESSFULLY;
-            return correctnessStatus;
-        }
-        if (command.getExtraArgs() > 1) {
+        if (command.isNeededElementFields()) {
+            if (command.getCountOfInlineExtraArgs() == 1) {
+                if (argumentsToCommand.size() != 1) {
+                    return DataInOutStatus.WRONGARGS;
+                }
+            }
             CommandDataChecker commandChecker = new CommandDataChecker();
             correctnessStatus = commandChecker.checkInputCommand(command);
             if (correctnessStatus == DataInOutStatus.SUCCESSFULLY) {

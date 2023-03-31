@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class UpdateIdCommand extends AbstractCommand implements Execute {
     public UpdateIdCommand() {
         super("update", "update the value of the collection element whose" +
-                " id is equal to the given one", 11 , "id {element}");
+                " id is equal to the given one", 1 , "id {element}" , true);
     }
 
     @Override

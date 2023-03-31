@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class RemoveGreaterCommand extends AbstractCommand implements Execute {
     public RemoveGreaterCommand() {
-        super("remove_greater", "remove from the collection all elements greater than the given", 1 , "{element}");
+        super("remove_greater", "remove from the collection all elements greater than the given", 0 , "{element}", true);
     }
     @Override
     public String execute(ArrayList<String> arguments, Receiver worker) {

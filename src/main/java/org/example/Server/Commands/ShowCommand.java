@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ShowCommand extends AbstractCommand implements Execute {
     public ShowCommand() {
-        super("show", "print to standard output all elements of the collection in string representation", 0 , "");
+        super("show", "print to standard output all elements of the collection in string representation", 0 , "" , false);
     }
 
     @Override
